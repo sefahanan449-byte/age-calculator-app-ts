@@ -2,11 +2,12 @@
 
 My solution to the [Age calculator app challenge](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q) on Frontend Mentor.
 
-## Screenshot.png.png
+## Screenshot.png
 
 
 
-![](./Screenshot.png.png)
+![](./Screenshot.png)
+
 
 
 

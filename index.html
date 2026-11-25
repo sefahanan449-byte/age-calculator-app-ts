@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-purple: hsl(259 100% 65%);
+        --color-light-red: hsl(0 100% 67%);
+        --color-off-white: hsl(0 0% 94%);
+        --color-light-grey: hsl(0 0% 86%);
+        --color-smokey-grey: hsl(0 1% 44%);
+        --color-off-black: hsl(0 0% 8%);
+        --font-poppins: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="grid min-h-screen place-items-center bg-off-white p-4 font-poppins">
+    <main
+      class="w-full max-w-[343px] rounded-3xl rounded-br-[100px] bg-white px-6 py-12 md:max-w-[840px] md:rounded-br-[200px] md:p-14"
+    >
+      <form id="age-form" novalidate>
+        <div class="grid grid-cols-3 gap-4 md:grid-cols-[repeat(3,160px)] md:gap-8">
+          <!-- DAY -->
+          <div class="group flex min-w-0 flex-col" data-field="day">
+            <label
+              for="day"
+              class="mb-1 text-xs font-bold uppercase tracking-[0.2em] text-smokey-grey group-[.invalid]:text-light-red md:mb-2 md:text-sm"
+              >Day</label
+            >
+            <input
+              id="day"
+              name="day"
+              type="text"
+              inputmode="numeric"
+              placeholder="DD"
+              maxlength="2"
+              autocomplete="off"
+              aria-describedby="day-error"
+              class="w-full cursor-pointer rounded-lg border border-light-grey px-4 py-3 text-xl font-bold caret-purple placeholder:text-smokey-grey/70 hover:border-purple focus:border-purple focus:outline-none group-[.invalid]:border-light-red group-[.invalid]:hover:border-light-red group-[.invalid]:focus:border-light-red md:px-6 md:text-[32px]"
+            />
+            <p
+              id="day-error"
+              role="alert"
+              class="mt-2 min-h-[3.1em] text-[11px] italic leading-snug text-light-red md:min-h-[1.6em] md:text-sm"
+            ></p>
+          </div>
+
+          <!-- MONTH -->
+          <div class="group flex min-w-0 flex-col" data-field="month">
+            <label
+              for="month"
+              class="mb-1 text-xs font-bold uppercase tracking-[0.2em] text-smokey-grey group-[.invalid]:text-light-red md:mb-2 md:text-sm"
+              >Month</label
+            >
+            <input
+              id="month"
+              name="month"
+              type="text"
+              inputmode="numeric"
+              placeholder="MM"
+              maxlength="2"
+              autocomplete="off"
+              aria-describedby="month-error"
+              class="w-full cursor-pointer rounded-lg border border-light-grey px-4 py-3 text-xl font-bold caret-purple placeholder:text-smokey-grey/70 hover:border-purple focus:border-purple focus:outline-none group-[.invalid]:border-light-red group-[.invalid]:hover:border-light-red group-[.invalid]:focus:border-light-red md:px-6 md:text-[32px]"
+            />
+            <p
+              id="month-error"
+              role="alert"
+              class="mt-2 min-h-[3.1em] text-[11px] italic leading-snug text-light-red md:min-h-[1.6em] md:text-sm"
+            ></p>
+          </div>
+
+          <!-- YEAR -->
+          <div class="group flex min-w-0 flex-col" data-field="year">
+            <label
+              for="year"
+              class="mb-1 text-xs font-bold uppercase tracking-[0.2em] text-smokey-grey group-[.invalid]:text-light-red md:mb-2 md:text-sm"
+              >Year</label
+            >
+            <input
+              id="year"
+              name="year"
+              type="text"
+              inputmode="numeric"
+              placeholder="YYYY"
+              maxlength="4"
+              autocomplete="off"
+              aria-describedby="year-error"
+              class="w-full cursor-pointer rounded-lg border border-light-grey px-4 py-3 text-xl font-bold caret-purple placeholder:text-smokey-grey/70 hover:border-purple focus:border-purple focus:outline-none group-[.invalid]:border-light-red group-[.invalid]:hover:border-light-red group-[.invalid]:focus:border-light-red md:px-6 md:text-[32px]"
+            />
+            <p
+              id="year-error"
+              role="alert"
+              class="mt-2 min-h-[3.1em] text-[11px] italic leading-snug text-light-red md:min-h-[1.6em] md:text-sm"
+            ></p>
+          </div>
+        </div>
+
+        <!-- Divider + button -->
+        <div
+          class="relative my-4 flex items-center justify-center before:absolute before:inset-x-0 before:top-1/2 before:h-px before:bg-light-grey md:my-0 md:justify-end"
+        >
+          <button
+            type="submit"
+            aria-label="Calculate age"
+            class="relative grid size-16 cursor-pointer place-items-center rounded-full bg-purple transition-colors hover:bg-off-black focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-off-black md:size-24"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 46 44"
+              aria-hidden="true"
+              class="h-auto w-6 md:w-11"
+            >
+              <g fill="none" stroke="#FFF" stroke-width="2">
+                <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+              </g>
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      <!-- Results -->
+      <section class="mt-4 md:mt-0" aria-live="polite" aria-label="Your age">
+        <p class="text-[56px] font-extrabold italic leading-[1.1] text-off-black md:text-[104px]">
+          <span class="text-purple" id="years">--</span> years
+        </p>
+        <p class="text-[56px] font-extrabold italic leading-[1.1] text-off-black md:text-[104px]">
+          <span class="text-purple" id="months">--</span> months
+        </p>
+        <p class="text-[56px] font-extrabold italic leading-[1.1] text-off-black md:text-[104px]">
+          <span class="text-purple" id="days">--</span> days
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="src/main.ts"></script>
+  </body>
+</html>

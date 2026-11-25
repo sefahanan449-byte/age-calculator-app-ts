@@ -2,11 +2,11 @@
 
 My solution to the [Age calculator app challenge](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q) on Frontend Mentor.
 
-## Screenshot
+## Screenshot.png.png
 
 
 
-![](./Screenshot.png)
+![](./Screenshot.png.png)
 
 
 
@@ -31,3 +31,10 @@ My solution to the [Age calculator app challenge](https://www.frontendmentor.io/
 `bash
 npm install
 npm run dev
+
+ Then open the `local host` link shown in the terminal
+
+## author
+GitHub - [@sefahanan449-byte](http://github.com/sefahanan449-byte)
+
+
